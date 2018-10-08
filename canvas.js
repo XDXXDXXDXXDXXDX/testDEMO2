@@ -87,3 +87,22 @@ document.addEventListener("mousemove",function(e){
     }  
 });
 
+// 图片预加载
+var imgSrcArr = [
+    './0.png',
+    './1.png',
+    './2.png',
+    './3.png'
+];
+
+var imgWrap = [];
+
+function preloadImg(arr) {
+    for(var i =0; i< arr.length ;i++) {
+        imgWrap[i] = new Image();
+        imgWrap[i].src = arr[i];
+    }
+}
+
+preloadImg(imgSrcArr);
+
